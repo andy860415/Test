@@ -8,18 +8,16 @@
 <body>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
        <script>
-           $.ajax({
-               url: 'test.json',
-               dataType:'json',
-               type: 'get',
-               cache: false,
-               success: function(data){
-                   $(data.TIME).each(function(index,value){
-                       console.log("work!!");
-                   })
-               }
+         $(document).ready(function(e) {
 
-           });
+                $.getJSON("test.json",function(data){
+                        $.each(data,function(i,field){
+                                $('.show').append(field+"");
+                                })
+                                alert(data);
+                        }
+           )
+});
         </script>
 </body>
 </html>
