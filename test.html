@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>TEST</title>
+</head>
+
+<body>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+       <script>
+           $.ajax({
+               url: 'https://github.com/andy860415/Test/blob/master/test.json',
+               dataType:'json',
+               type: 'get',
+               cache: false,
+               success: function(data){
+                   $(data.TIME).each(function(index,value){
+                       console.log("work!!");
+                   })
+               }
+
+           });
+        </script>
+</body>
+</html>
